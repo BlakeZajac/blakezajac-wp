@@ -1,0 +1,54 @@
+.hero {
+	&__page-title {
+		padding-bottom: 1rem !important;
+	}
+
+	&__heading {
+		max-width: 800px;
+		line-height: 1.15;
+	}
+
+	&__body {
+		max-width: 700px;
+		line-height: 1.35;
+	}
+
+	&__btn-wrapper {
+		padding-top: 1.5rem;
+		gap: 1.25rem;
+	}
+
+	&__link {
+		padding-bottom: 4px;
+		color: $color-black;
+		@extend %text-link;
+	}
+
+	&__image {
+		margin-top: 6rem;
+		padding-top: 40%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: $radius-md;
+
+		@media all and (max-width: $bp-tablet) {
+			margin-top: 4rem;
+			padding-top: 55%;
+		}
+
+		@media all and (max-width: $bp-mobile) {
+			padding-top: 70%;
+		}
+	}
+}
+
+.page-id-411 {
+	.hero {
+		&__image {
+			@media all and (max-width: $bp-tablet) {
+				display: none !important;
+			}
+		}
+	}
+}

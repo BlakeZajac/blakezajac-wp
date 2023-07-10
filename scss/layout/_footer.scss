@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+    background-color: $color-black;
+
+    &__row {
+        padding: 2rem 2rem 9rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            padding: 2rem 1rem 2rem;
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        flex: 1 1 30%;
+    }
+
+    &__heading {
+        color: $color-white;
+    }
+
+    &__items {
+        p,
+        a {
+            color: var(--white-60);
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: $color-white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #newsletter-popup {
+            @extend %text-link;
+            padding-bottom: 0.25rem;
+        }
+    }
+}

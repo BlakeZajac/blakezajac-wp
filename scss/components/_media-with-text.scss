@@ -1,0 +1,84 @@
+.media-with-text {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            flex-direction: column;
+            gap: 0;
+            padding: 0 2rem;
+        }
+        &.wp-block-columns {
+            padding-bottom: 0px !important;
+        }
+    }
+
+    &__col {
+        flex: 1 1 45%;
+
+        &--image {
+            padding-bottom: 30%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: $radius-md;
+
+            @media all and (max-width: $bp-tablet) {
+                padding-bottom: 60%;
+            }
+
+            @media all and (max-width: $bp-mobile) {
+                padding-bottom: 90%;
+            }
+        }
+
+        &--content {
+            @media all and (max-width: $bp-tablet) {
+                padding: 3rem 0;
+            }
+        }
+    }
+
+    &__content {
+        @media all and (min-width: $bp-desktop) {
+            max-width: 450px;
+        }
+    }
+
+    &__heading {
+        padding-bottom: 2rem;
+    }
+
+    &__btn-wrapper {
+        padding-top: 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    &--image-right {
+        .media-with-text__row {
+            @media all and (min-width: $bp-desktop) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &--image-left {
+        .media-with-text__content {
+            margin: 0 auto;
+        }
+    }
+
+    &:not(.last) {
+        .media-with-text__row {
+            @media all and (min-width: $bp-desktop) {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

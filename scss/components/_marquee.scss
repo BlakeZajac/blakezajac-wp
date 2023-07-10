@@ -1,0 +1,41 @@
+.marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+
+    &__content {
+		padding: 0.5rem 0;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-around;
+        min-width: 100%;
+        gap: 8rem;
+
+        &.scroll {
+            animation: scroll 60s linear infinite;
+        }
+    }
+	
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		height: 5rem;
+		
+		img {
+			width: auto;
+			height: 35px;
+		}
+	}
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 8rem));
+    }
+}

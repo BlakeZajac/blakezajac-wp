@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+$bp-mobile: 479px;
+$bp-mobile-up: 480px;
+$bp-tablet-sm: 767px;
+$bp-tablet-sm-up: 768px;
+$bp-tablet: 980px;
+$bp-desktop: 981px;
+
+// By default, the header breakpoint is 980px, change this value if you need to call the header at a different width, then use this as the breakpoint.
+$bp-header: 980px;
+
+// Colour
+$color-black: #000;
+$color-grey: #888;
+$color-white: #fff;
+$color-border: #d0d5dd;
+$color-border-light: #f2f4f7;
+$color-light-grey: #f5f5f5;
+
+// Brand Colour
+$color-primary-900: #f47920;
+$color-primary-800: #f58838;
+$color-primary-700: #f69651;
+$color-primary-600: #f8a569;
+$color-primary-500: #f9b381;
+$color-primary-400: #fac29a;
+$color-primary-300: #fbd1b2;
+$color-primary-200: #fcdfca;
+$color-primary-100: #feeee2;
+$color-primary-50: #fef5ef;
+
+$color-primary: $color-primary-900;
+
+// Font
+$font-light: "SuisseIntl-Light";
+$font-regular: "SuisseIntl-Regular";
+$font-medium: "SuisseIntl-Regular";
+
+// Border Radius
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;

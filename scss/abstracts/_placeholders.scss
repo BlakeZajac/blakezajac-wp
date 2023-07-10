@@ -1,0 +1,50 @@
+:root {
+    --text-underline: 0%;
+}
+
+%text-link {
+    background: linear-gradient(
+            90deg,
+            currentColor 33.33333%,
+            transparent 0 66.6666%,
+            currentColor 0
+        )
+        var(--text-underline, 100%) 100%/300% 1px no-repeat;
+    transition: background 0.8s cubic-bezier(0.52, 0.18, 0.45, 1.4) 0s;
+    &:hover {
+        --text-underline: 100%;
+    }
+}
+
+%input {
+    font-family: $font-regular;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    outline: none;
+    box-shadow: var(--shadow-xs);
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        border: 1px solid $color-primary;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: 1px solid $color-primary;
+        box-shadow: 0px 0px 0px 4px $color-primary-50,
+            0px 1px 2px 0px $color-primary-400;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &::placeholder {
+        color: $color-black;
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
+    }
+}
