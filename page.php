@@ -18,7 +18,11 @@ if (have_rows('components')) :
             // Load subfields
             $hero_prepended_text = get_sub_field('prepended_text');
             $hero_image = get_sub_field('image');
-            $hero_appended_text = get_sub_field('appended_text'); ?>
+            $hero_appended_text = get_sub_field('appended_text');
+
+            $icon_accent = "/wp-content/themes/blake-zajac/assets/icons/icon-accent.svg";
+            $icon_australia = "/wp-content/themes/blake-zajac/assets/icons/icon-sydney.svg";
+?>
 
             <div class="section hero">
                 <div class="row hero__row">
@@ -28,8 +32,8 @@ if (have_rows('components')) :
 
                             <?php if (!empty($hero_image)) : ?>
                                 <div class="hero__image-wrapper">
-                                    <img src="<?php echo $hero_image; ?>" alt="" class="hero__image">
-                                    <img src="" alt="" class="hero__image__accent">
+                                    <img src="<?php echo $hero_image['url']; ?>" alt="" class="hero__image">
+                                    <img src="<?php echo $icon_accent; ?>" alt="" class="hero__image__accent">
                                 </div>
                             <?php endif; ?>
 
@@ -48,7 +52,17 @@ if (have_rows('components')) :
                                 $badge_text = get_sub_field('badge_text'); ?>
 
                                 <div class="badge badge--<?php echo $badge_type; ?>">
-                                    <?php echo $badge_text; ?>
+                                    <?php if ($badge_type == 'dot') : ?>
+                                        <div class="badge__dot"></div>
+                                    <?php endif; ?>
+
+                                    <?php if ($badge_type == 'location') : ?>
+                                        <img src="<?php echo $icon_australia; ?>" alt="" class="badge__image">
+                                    <?php endif; ?>
+
+                                    <p class="badge__content text-uppercase text-uppercase--sm">
+                                        <?php echo $badge_text; ?>
+                                    </p>
                                 </div>
 
                             <?php endwhile; ?>

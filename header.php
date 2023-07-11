@@ -20,12 +20,26 @@
     $primary_menu = wp_nav_menu(
         array(
             'menu_name' => 'main_menu',
-            'menu_class' => 'header__menu',
             'echo' => false,
         )
     );
+
+    $logo = get_theme_mod('logo_image');
+    $alternate_logo = get_theme_mod('alternate_logo_image');
     ?>
 
     <header class="header">
+        <div class="row header__container">
+            <a href="/">
+                <img src="<?php echo wp_get_attachment_image_url($logo); ?>" alt="Logo" class="logo" />
+            </a>
 
+            <div class="header__menu">
+                <span class="header__menu__label">Menu</span>
+
+                <div class="header__submenu">
+                    <?php echo $primary_menu; ?>
+                </div>
+            </div>
+        </div>
     </header>
