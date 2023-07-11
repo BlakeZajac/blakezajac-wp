@@ -20,8 +20,8 @@ if (have_rows('components')) :
             $hero_image = get_sub_field('image');
             $hero_appended_text = get_sub_field('appended_text');
 
-            $icon_accent = "/wp-content/themes/blake-zajac/assets/icons/icon-accent.svg";
-            $icon_australia = "/wp-content/themes/blake-zajac/assets/icons/icon-sydney.svg";
+            $icon_accent = get_template_directory_uri() . '/assets/icons/icon-accent.svg';
+            $icon_australia = get_template_directory_uri() . '/assets/icons/icon-sydney.svg';
 ?>
 
             <div class="section hero">
