@@ -2,78 +2,72 @@
 // Basic typography style for copy text
 // -----------------------------------------------------------------------------
 
-.heading-xxl {
-    font-family: $font-regular;
-    font-size: 6.875rem;
-    line-height: 1;
-
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 2.625rem;
-    }
-}
-
 .heading-xl {
-    font-family: $font-medium;
-    font-size: 4.5rem;
-    line-height: 1.2;
+  font-family: $font-heading;
+  font-size: 5.625rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
 
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 2.625rem;
-    }
+  @media all and (max-width: $bp-tablet-sm) {
+    font-size: 3rem;
+  }
 }
 
 .heading-lg {
-    font-family: $font-medium;
-    font-size: 2.625rem;
-    line-height: 1.2;
+  font-family: $font-heading;
+  font-size: 5.625rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
 
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 2rem;
-    }
+  @media all and (max-width: $bp-tablet-sm) {
+    font-size: 2rem;
+  }
 }
 
 .heading-md {
-    font-size: 1.875rem;
-    line-height: 1.2;
+  font-size: 1.875rem;
+  line-height: 1.2;
 
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 1.5rem;
-    }
+  @media all and (max-width: $bp-tablet-sm) {
+    font-size: 1.5rem;
+  }
 }
 
 .heading-sm {
-    font-family: $font-medium;
-    font-size: 1.75rem;
-    line-height: 1.2;
+  font-family: $font-medium;
+  font-size: 1.75rem;
+  line-height: 1.2;
 
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 1.125rem;
-    }
+  @media all and (max-width: $bp-tablet-sm) {
+    font-size: 1.125rem;
+  }
 }
 
 .heading-xs {
-    font-family: $font-medium;
-    font-size: 1.375rem;
-    line-height: 1.2;
+  font-family: $font-medium;
+  font-size: 1.375rem;
+  line-height: 1.2;
 }
 
 .heading-xxs {
-    font-family: $font-medium;
-    font-size: 1.125rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+  font-family: $font-medium;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .body-xl,
 .body-xl p {
-    font-family: $font-regular;
-    font-size: 1.375rem;
-    line-height: 1.4;
-    color: #000;
+  font-family: $font-regular;
+  font-size: 1.375rem;
+  line-height: 1.4;
+  color: #000;
 
-    @media all and (max-width: $bp-tablet-sm) {
-        font-size: 1.125rem;
-    }
+  @media all and (max-width: $bp-tablet-sm) {
+    font-size: 1.125rem;
+  }
 }
 
 h1,
@@ -82,39 +76,39 @@ h3,
 h4,
 h5,
 h6 {
-    padding-bottom: 1rem;
-    font-weight: normal;
-    color: $color-black;
-    letter-spacing: -0.64px;
+  padding-bottom: 1rem;
+  font-weight: normal;
+  color: $color-black;
+  letter-spacing: -0.64px;
 }
 
 body,
 p,
 ol,
 ul {
-    font-family: $font-regular;
-    font-size: 0.9375rem;
-    font-weight: normal;
-    line-height: 1.5;
-    letter-spacing: 0;
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 
 p,
 ol,
 ul {
-    color: $color-grey;
+  color: $color-grey;
 }
 
 p {
-    &:not(:last-child) {
-        padding-bottom: 1rem;
-    }
+  &:not(:last-child) {
+    padding-bottom: 1rem;
+  }
 }
 
 .font-md {
-    font-family: $font-medium;
+  font-family: $font-medium;
 }
 
 .font-reg {
-    font-family: $font-regular;
+  font-family: $font-regular;
 }

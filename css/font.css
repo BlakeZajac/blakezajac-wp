@@ -1,23 +1,13 @@
 @font-face {
-  font-family: "SuisseIntl-Light";
-  src: url("/wp-content/themes/blake-zajac/fonts/SuisseIntl-Light.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "ClashDisplay";
+  src: url("/wp-content/themes/blake-zajac/fonts/ClashDisplay-Variable.ttf");
+  font-weight: 100 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SuisseIntl-Regular";
-  src: url("/wp-content/themes/blake-zajac/fonts/SuisseIntl-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SuisseIntl-Medium";
-  src: url("/wp-content/themes/blake-zajac/fonts/SuisseIntl-Medium.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "SatoshiVariable";
+  src: url("/wp-content/themes/blake-zajac/fonts/Satoshi-Variable.ttf");
+  font-weight: 100 900;
   font-display: swap;
 }
