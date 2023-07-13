@@ -1,41 +1,90 @@
 .marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+
+  &__content {
+    padding: 0.5rem 0;
     display: flex;
-    overflow: hidden;
-    user-select: none;
+    flex-shrink: 0;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 8rem;
 
-    &__content {
-		padding: 0.5rem 0;
-        display: flex;
-        flex-shrink: 0;
-        justify-content: space-around;
-        min-width: 100%;
-        gap: 8rem;
-
-        &.scroll {
-            animation: scroll 60s linear infinite;
-        }
+    &.scroll {
+      animation: scroll 60s linear infinite;
     }
-	
-	&__item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: fit-content;
-		height: 5rem;
-		
-		img {
-			width: auto;
-			height: 35px;
-		}
-	}
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 5rem;
+
+    img {
+      width: auto;
+      height: 35px;
+    }
+  }
+
+  &-wrapper {
+    .marquee--text {
+      .marquee__content {
+        gap: 6rem;
+
+        @media all and (max-width: $bp-tablet-sm) {
+          gap: 2rem;
+        }
+
+        .outer {
+          &:not(:last-child) {
+            margin-right: 1rem;
+
+            @media all and (max-width: $bp-tablet-sm) {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .marquee__item {
+        height: unset;
+      }
+
+      &:nth-child(1) {
+        .marquee__content {
+          animation-duration: 540s;
+        }
+      }
+
+      &:nth-child(2) {
+        .marquee__content {
+          animation-name: scroll-reverse;
+          animation-duration: 900s;
+        }
+      }
+    }
+  }
 }
 
 @keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(calc(-100% - 8rem));
-    }
+  to {
+    transform: translateX(calc(-100% - 8rem));
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-80%);
+  }
+
+  to {
+    transform: translateX(calc(100% - 8rem));
+  }
 }

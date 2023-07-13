@@ -16,13 +16,13 @@
 
 .heading-lg {
   font-family: $font-heading;
-  font-size: 5.625rem;
+  font-size: 3.75rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
 
   @media all and (max-width: $bp-tablet-sm) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -67,6 +67,18 @@
 
   @media all and (max-width: $bp-tablet-sm) {
     font-size: 1.125rem;
+  }
+}
+
+.text-uppercase {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &--sm {
+    font-size: 0.75rem;
   }
 }
 

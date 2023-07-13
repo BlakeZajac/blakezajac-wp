@@ -1,6 +1,6 @@
 <?php
 get_header();
 
-404
+echo "404";
 
 get_footer();

@@ -12,7 +12,9 @@ if (have_rows('components')) :
     while (have_rows('components')) :
         the_row();
 
-        // Case: Hero section
+        /*
+        * Case: Hero Section
+        */
         if (get_row_layout() == 'hero_section') :
 
             // Load subfields
@@ -27,7 +29,7 @@ if (have_rows('components')) :
             <div class="section hero">
                 <div class="row hero__row">
                     <?php if (!empty($hero_prepended_text) && !empty($hero_appended_text)) : ?>
-                        <h2 class="hero__content heading-xl span-text">
+                        <h2 class="hero__content heading-xl">
                             <?php echo $hero_prepended_text; ?>
 
                             <?php if (!empty($hero_image)) : ?>
@@ -67,17 +69,56 @@ if (have_rows('components')) :
 
                             <?php endwhile; ?>
                         </div>
+                    <?php endif; ?>
                 </div>
             </div>
+        <?php endif; // End media with text section 
+        ?>
+
+        <?php
+        /*
+        * Case: Marquee Section
+        */
+        if (get_row_layout() == 'marquee_section') :
+
+            // Load subfields
+            $marquee_type = get_sub_field('marquee_type');
+            $marquee_text_one = get_sub_field('text_one');
+            $marquee_text_two = get_sub_field('text_two'); ?>
+
+            <div class="section marquee-wrapper">
+                <div class=" marquee marquee--<?php echo $marquee_type; ?>">
+                    <div class="row marquee__content scroll">
+                        <?php for ($i = 1; $i <= 10; $i++) : ?>
+                            <div class="marquee__item heading-lg span-text">
+                                <?php echo $marquee_text_one; ?>
+                            </div>
+                        <?php endfor; ?>
+                    </div>
+                </div>
+
+                <div class="marquee marquee--<?php echo $marquee_type; ?>">
+                    <div class="row marquee__content scroll">
+                        <?php for ($i = 1; $i <= 10; $i++) : ?>
+                            <div class="marquee__item heading-lg span-text">
+                                <?php if (empty($marquee_text_two)) :
+                                    echo $marquee_text_one;
+
+                                elseif (!empty($marquee_text_two)) :
+                                    echo $marquee_text_two;
+                                endif; ?>
+                            </div>
+                        <?php endfor; ?>
+                    </div>
+                </div>
+            </div>
+
 <?php endif;
+    // End marquee section
 
+    // End loop
+    endwhile;
 
-                endif;
+endif;
 
-            // End loop
-            endwhile;
-
-        endif;
-
-
-        get_footer();
+get_footer();

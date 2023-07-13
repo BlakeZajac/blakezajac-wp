@@ -17,8 +17,8 @@ body {
 }
 
 ::selection {
-  background-color: $color-primary;
-  color: $color-white;
+  background-color: $color-black;
+  color: $color-light-grey;
 }
 
 a {
@@ -96,18 +96,6 @@ html.lenis {
 
   @media all and (max-width: $bp-tablet) {
     padding: 3rem 1rem;
-  }
-}
-
-.text-uppercase {
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  &--sm {
-    font-size: 0.75rem;
   }
 }
 

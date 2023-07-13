@@ -1,1 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener("DOMContentLoaded", () => {
+  createSpanText(".span-text");
+});
